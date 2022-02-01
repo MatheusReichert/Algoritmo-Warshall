@@ -139,13 +139,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Grafo.cpp" />
+    <ClCompile Include="GrafoOrientado.cpp" />
     <ClCompile Include="GrafoAbstract.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Warshall.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Grafo.h" />
+    <ClInclude Include="GrafoOrientado.h" />
     <ClInclude Include="GrafoAbstract.h" />
     <ClInclude Include="Warshall.h" />
   </ItemGroup>

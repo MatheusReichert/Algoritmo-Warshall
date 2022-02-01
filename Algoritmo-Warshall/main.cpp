@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<iostream>
-#include"Grafo.h"
+#include"GrafoOrientado.h"
 #include"Warshall.h"
 
 using namespace std;
@@ -18,10 +18,10 @@ void menu() {
             break;
         }
         Grafo a(vertices);
-
+        system("cls");
         while (true)
         {
-            cout << "Digite os pares que formam um vertice(relaçoes de adjecencia): " << endl << "Ex: 1 2" << endl << "Digite -1 para parar" << endl;
+            cout << "Digite os pares que formam um vertice(relacoes de adjecencia): " << endl << "Ex: 1 2" << endl << "Digite -1 para parar" << endl;
             cin >> verticeUm;
             if (verticeUm == -1) {
                 break;
@@ -29,6 +29,7 @@ void menu() {
             cin >> verticeDois;
 
             a.adicionar(verticeUm, verticeDois);
+            system("cls");
         }
 
         system("cls");

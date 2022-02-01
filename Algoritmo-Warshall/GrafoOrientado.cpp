@@ -1,7 +1,7 @@
-#include "Grafo.h"
+#include "GrafoOrientado.h"
 #include <iostream>
 
-Grafo::Grafo(int maximoDeVertices) : matrizAdj(maximoDeVertices, std::vector<int>(maximoDeVertices, 0)){
+Grafo::Grafo(int maximoDeVertices) : GrafoAbstract(maximoDeVertices) {
     this->maximoDeVertices = maximoDeVertices;
 
 }
@@ -12,18 +12,29 @@ Grafo::~Grafo()
 
 void Grafo::adicionar(int verticeUm, int verticeDois)
 {
-    matrizAdj[verticeUm][verticeDois] = 1;
-    matrizAdj[verticeDois][verticeUm] = 1;
+    if (matrizAdj[verticeUm][verticeDois] == 0) {
+        matrizAdj[verticeUm][verticeDois] = 1;
+    }
+    else {
+        matrizAdj[verticeUm][verticeDois]++;
+    }
+
+
 }
 
 void Grafo::remover(int verticeUm, int verticeDois)
 {
-    matrizAdj[verticeUm][verticeDois] = 0;
+    if (matrizAdj[verticeUm][verticeDois] > 0) {
+        matrizAdj[verticeUm][verticeDois]--;
+    }
 }
 
 int Grafo::ehAdjecente(int verticeUm, int verticeDois)
 {
-    return matrizAdj[verticeUm][verticeDois];
+    if (matrizAdj[verticeUm][verticeDois] > 0) {
+        return 1;
+    }
+    return 0;
 }
 
 

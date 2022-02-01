@@ -14,11 +14,11 @@ void Warshall::fechamentoTransitivo() {
         for (int i = 0; i < maximoDeVertices; i++) {
             if (matrizCaminho[i][k] == 1) {
                 for (int j = 0; j < maximoDeVertices; j++) {
-                    matrizCaminho[i][j] = matrizCaminho[i][j] | matrizCaminho[k][j];
-                    std::cout << "Matriz de acessibilidade usando o Algoritmo de Warshall" << std::endl;
-                    imprimeMatrizCaminho();
-                    Sleep(500);
-                    system("cls");
+                        matrizCaminho[i][j] = matrizCaminho[i][j] | matrizCaminho[k][j];
+                        std::cout << "Matriz de acessibilidade usando o Algoritmo de Warshall" << std::endl;
+                        imprimeMatrizCaminho();
+                        Sleep(500);
+                        system("cls");
                 }
             }
         }

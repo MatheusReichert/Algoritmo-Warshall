@@ -1,14 +1,13 @@
 #ifndef GRAFO_H
 #define GRAFO_H
 
-#include"vector"
+
 #include"GrafoAbstract.h"
 
 class Grafo : public GrafoAbstract
 {
 	private:
-
-    std::vector<std::vector<int>> matrizAdj;
+    
 public:
 
     int maximoDeVertices;

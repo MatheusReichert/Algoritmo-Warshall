@@ -1,7 +1,7 @@
 #ifndef WARSHALL_H
 #define WARSHALL_H
 
-#include"Grafo.h"
+#include"GrafoOrientado.h"
 #include<vector>
 class Warshall
 {
